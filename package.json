@@ -1,0 +1,22 @@
+{
+  "name": "project-06-trillo",
+  "version": "1.0.0",
+  "description": "All-in one booking sites",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salman-Farshe/Trillo.git"
+  },
+  "author": "Salman Farshe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salman-Farshe/Trillo/issues"
+  },
+  "homepage": "https://github.com/Salman-Farshe/Trillo#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+.content{
+    display: flex;
+    height: 100%; // depends on parent element
+}
+
+.sidebar{
+    flex: 0 1 20%; // grow, shrink, basis
+    background-color: var(--light-color);
+    height: 100%;
+}
+
+.hotel__view{
+    flex: 1; // only grow
+    background-color: var(--secondary-color);
+    height: 100%;
+}

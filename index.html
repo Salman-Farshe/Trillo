@@ -23,8 +23,37 @@
 
     <div class="container">
         <header class="header">
-            header content 
+            <img src="./image/trillo__logo.png" alt="trillo logo" class="logo">
+
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="search here">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="./image/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user__nav">
+                <div class="user__nav__box">
+                    <svg class="user__nav__icon">
+                        <use xlink:href="./image/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user__nav__notification">7</span>
+                </div>
+                <div class="user__nav__box">
+                    <svg class="user__nav__icon">
+                        <use xlink:href="./image/sprite.svg#icon-chat"></use>                   
+                    </svg>
+                    <span class="user__nav__notification">13</span>
+                </div>
+                <div class="user__nav__box">
+                    <img src="./image/user.jpg" alt="user image" class="user__nav__user">
+                    <span class="user__nav__username">SF</span>
+                </div>
+            </nav>
         </header>
+        
         <div class="content">
             <nav class="sidebar">
                 sidebaar navbaar

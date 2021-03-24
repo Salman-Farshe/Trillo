@@ -3,6 +3,7 @@
   --primary-color: #ff9900;
   --secondary-color: #2fa1c4;
   --light-color: #ffffff;
+  --light-color-2: #f5f5f5;
   --dark-color: #333333;
   --dark-light-color: #9c9c9c; }
 
@@ -26,21 +27,110 @@ body {
 .header {
   width: 100%;
   height: 3rem;
-  background-color: var(--dark-light-color); }
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/* logo section */
+.logo {
+  height: 4rem;
+  margin-left: 3rem; }
+
+/* search icon */
+.search {
+  flex: 0 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Use adjacent sibling.......... */ }
+  .search__input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: var(--light-color);
+    width: 90%;
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 5rem;
+    transition: all 0.2s;
+    margin-right: -2.5rem;
+    /*inpur placeholder property */ }
+    .search__input:focus {
+      width: 100%;
+      background-color: var(--light-color-2);
+      border: none;
+      border-radius: 5rem;
+      outline: none; }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100; }
+  .search__button {
+    background-color: var(--light-color);
+    border: none; }
+    .search__button:focus, .search__button:active {
+      border: none;
+      outline: none;
+      background-color: var(--light-color-2); }
+  .search__icon {
+    height: 1rem;
+    width: 1rem;
+    /* changed the svg color easily */
+    fill: var(--dark-color); }
+  .search__input:focus + .search__button {
+    background-color: var(--light-color-2); }
+
+/* user navigation */
+.user__nav {
+  display: flex;
+  /* child of the main header........ */
+  align-self: stretch;
+  align-items: center; }
+  .user__nav__box {
+    padding: 0 1.5rem;
+    cursor: pointer;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .user__nav__box:hover {
+      background-color: var(--light-color-2); }
+  .user__nav__icon {
+    width: 2rem;
+    height: 1.5rem;
+    fill: var(--dark-color); }
+  .user__nav__notification {
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0.7rem; }
+  .user__nav__user {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-left: -0.5rem; }
+  .user__nav__username {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 0.1rem;
+    color: var(--primary-color); }
 
 .content {
-  display: flex;
-  height: 100%; }
+  display: flex; }
 
 .sidebar {
   flex: 0 1 20%;
-  background-color: var(--light-color);
-  height: 100%; }
+  background-color: var(--dark-light-color); }
 
 .hotel__view {
   flex: 1;
-  background-color: var(--secondary-color);
-  height: 100%; }
+  background-color: var(--secondary-color); }
 
 .container {
   max-width: 80vw;

@@ -12,8 +12,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow: hidden; }
+  box-sizing: border-box; }
 
 html, body {
   font-family: 'Open Sans', sans-serif; }
@@ -122,19 +121,82 @@ body {
     color: var(--primary-color); }
 
 .content {
-  display: flex; }
+  display: flex;
+  height: 100%; }
 
 .sidebar {
   flex: 0 1 20%;
-  background-color: var(--dark-light-color); }
+  background-color: var(--dark-color);
+  height: 100%; }
 
 .hotel__view {
   flex: 1;
-  background-color: var(--secondary-color); }
+  background-color: var(--secondary-color);
+  height: 100%; }
+
+.content .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .content .sidebar .side-nav {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-top: 3rem;
+    padding: 0rem; }
+    .content .sidebar .side-nav__item {
+      position: relative; }
+      .content .sidebar .side-nav__item:not(:last-child) {
+        margin-bottom: 0.5rem; }
+    .content .sidebar .side-nav__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.3rem;
+      background-color: var(--primary-color);
+      transform: scaleY(0);
+      /* use multiple property on transition
+                    the first one, then second one, then cubic-bezier last is transition delay
+                */
+      transition: transform 0.2s, width 0.4s cubic-bezier(0.83, 0, 0.17, 1) 0.2s; }
+    .content .sidebar .side-nav__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
+    .content .sidebar .side-nav__link:link, .content .sidebar .side-nav__link:visited {
+      color: var(--light-color);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      padding: 0.5rem;
+      /* link always on the top. 
+                    before and after the &__item hover */
+      position: relative;
+      z-index: 10; }
+    .content .sidebar .side-nav__link {
+      display: flex;
+      align-items: center; }
+    .content .sidebar .side-nav__icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 1.5rem;
+      /* color of the parent element */
+      fill: currentColor; }
+    .content .sidebar .side-nav span {
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center; }
+  .content .sidebar .legal {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--light-color);
+    padding: 1rem;
+    text-align: center; }
 
 .container {
   max-width: 80vw;
-  height: 80vh;
+  height: 100vh;
   margin: 4rem auto;
   background-color: var(--light-color);
   padding: 0; }

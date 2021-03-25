@@ -23,6 +23,17 @@ html {
 body {
   background-color: var(--primary-color); }
 
+/*  overview button section  */
+@keyframes pulset {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1); } }
+
 .header {
   width: 100%;
   height: 3rem;
@@ -198,7 +209,61 @@ body {
   .gallery__image {
     display: block;
     width: 100%;
-    height: 80%; }
+    height: 100%; }
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  /* center item vertically  */
+  align-items: center; }
+  .overview__heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem; }
+  .overview__star {
+    /* flex + margin = becomes more powerful  */
+    margin-right: auto;
+    /* to remove extra white space between the star icon each of them*/
+    display: flex; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: var(--primary-color); }
+  .overview__location {
+    /* it consume the available space. revome the troubling in hover effect */
+    margin-left: auto;
+    display: flex;
+    align-items: center; }
+  .overview__icon-location {
+    margin-right: 0.5rem; }
+  .overview .btn-inline {
+    border: none;
+    color: var(--primary-color);
+    border-bottom: 1px solid currentColor;
+    padding: 0.2rem;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s; }
+    .overview .btn-inline:hover {
+      color: var(--dark-color); }
+    .overview .btn-inline:focus {
+      outline: none;
+      animation: pulset 0.2s infinite; }
+  .overview__rating {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    margin-left: 1rem;
+    align-self: stretch;
+    padding: 0.2rem; }
+    .overview__rating-average {
+      font-size: 1.8rem;
+      font-weight: 500; }
+    .overview__rating-count {
+      font-size: 0.8rem;
+      font-weight: 400; }
 
 .container {
   max-width: 80vw;

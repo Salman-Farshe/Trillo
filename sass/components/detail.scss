@@ -1,0 +1,74 @@
+.detail{
+    .description{
+        padding: 0.5rem;
+        font-size: 1rem;
+
+        /////////////////////
+        .paragraph{
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+
+        //////////////////////
+        .list{
+            list-style: none;
+            margin: 1rem 0rem;
+            padding: 1rem 0rem;
+
+            display: flex;
+            flex-wrap: wrap; // using wrap for multiline
+
+            &__item{
+                flex: 0 1 50%;
+                margin-bottom: 0.5rem;
+
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    /* for older browser  */
+                    background-image: url(../../image/SVG/chevron-right.svg);
+                    background-size:cover;
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 0.5rem;
+                    /* for newer browser we use mask... 
+                        Basically mask define an area,
+                        where we can look through the element.
+                        To see whats behind the element.
+                    */
+                    background-color: var(--light-color);
+                   // -webkit-mask-image: url('../../image/SVG/chevron-right.svg');
+                    //-webkit-mask-size: cover;
+                   // mask-image: url('../../image/SVG/chevron-right.svg');
+                    //mask-size: cover;
+
+                }
+            }
+        }
+
+        //////////////////////
+        .recommend{
+            display: flex;
+            align-items: center;
+
+            &__count{
+                font-size: 0.8rem;
+                font-weight: 700;
+                margin-right: auto;
+            }
+
+            &__image{
+                box-sizing: content-box;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 3px solid var(--light-color);
+
+                &:not(:last-child){
+                    margin-right: -1rem;
+                }
+            }
+        }
+    }
+}

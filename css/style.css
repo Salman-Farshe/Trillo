@@ -148,6 +148,20 @@ body {
   flex: 1;
   height: 100%; }
 
+.detail {
+  display: flex;
+  padding: 3rem; }
+
+.description {
+  background-color: var(--light-color);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.06);
+  flex: 0 1 70%;
+  margin-right: 3rem; }
+
+.user-review {
+  background-color: darkred;
+  flex: 1; }
+
 .content .sidebar {
   display: flex;
   flex-direction: column;
@@ -269,9 +283,54 @@ body {
       font-size: 0.8rem;
       font-weight: 400; }
 
+.detail .description {
+  padding: 0.5rem;
+  font-size: 1rem; }
+  .detail .description .paragraph:not(:last-child) {
+    margin-bottom: 2rem; }
+  .detail .description .list {
+    list-style: none;
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-wrap: wrap; }
+    .detail .description .list__item {
+      flex: 0 1 50%;
+      margin-bottom: 0.5rem; }
+      .detail .description .list__item::before {
+        content: "";
+        display: inline-block;
+        /* for older browser  */
+        background-image: url(../../image/SVG/chevron-right.svg);
+        background-size: cover;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        /* for newer browser we use mask... 
+                        Basically mask define an area,
+                        where we can look through the element.
+                        To see whats behind the element.
+                    */
+        background-color: var(--light-color); }
+  .detail .description .recommend {
+    display: flex;
+    align-items: center; }
+    .detail .description .recommend__count {
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: auto; }
+    .detail .description .recommend__image {
+      box-sizing: content-box;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      border: 3px solid var(--light-color); }
+      .detail .description .recommend__image:not(:last-child) {
+        margin-right: -1rem; }
+
 .container {
   max-width: 80vw;
-  height: 100vh;
+  height: 150vh;
   margin: 4rem auto;
   background-color: var(--light-color);
   padding: 0; }

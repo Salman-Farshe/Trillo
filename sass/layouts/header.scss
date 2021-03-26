@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* header section always on the Top*/
+    position: relative;
+    z-index: 1;
 }
 
 

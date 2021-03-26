@@ -40,7 +40,10 @@ body {
   background-color: var(--light-color);
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  /* header section always on the Top*/
+  position: relative;
+  z-index: 1; }
 
 /* logo section */
 .logo {

@@ -262,6 +262,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     padding: 0.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .overview__heading {
+        font-size: 1rem;
+        letter-spacing: 0;
+        font-weight: 400; } }
   .overview__star {
     /* flex + margin = becomes more powerful  */
     margin-right: auto;
@@ -271,11 +276,18 @@ body {
     width: 1.3rem;
     height: 1.3rem;
     fill: var(--primary-color); }
+    @media only screen and (max-width: 56.25em) {
+      .overview__icon-star, .overview__icon-location {
+        width: 1rem;
+        height: 1rem; } }
   .overview__location {
     /* it consume the available space. revome the troubling in hover effect */
     margin-left: auto;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .overview__location {
+        display: none; } }
   .overview__icon-location {
     margin-right: 0.5rem; }
   .overview .btn-inline {

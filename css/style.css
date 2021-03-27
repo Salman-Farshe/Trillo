@@ -7,6 +7,19 @@
   --dark-color: #333333;
   --dark-light-color: #9c9c9c; }
 
+/* media queries manager  */
+/*
+    1rem / 1em = 16px
+    600px = 37.5em
+    900px = 56.25em
+    1200px = 75em
+    1800px = 112.5em
+
+phone           - 600px
+tablet portait  - 900px
+tablet landscape - 1200px
+desktop          - 1400px
+*/
 *,
 *::before,
 *::after {

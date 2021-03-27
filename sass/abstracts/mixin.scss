@@ -1,0 +1,46 @@
+/* media queries manager  */
+
+/*
+    1rem / 1em = 16px
+    600px = 37.5em
+    900px = 56.25em
+    1200px = 75em
+    1800px = 112.5em
+
+phone           - 600px
+tablet portait  - 900px
+tablet landscape - 1200px
+desktop          - 1400px
+*/
+
+@mixin responsive($breakpoint){
+    @if ($breakpoint == large){
+        @media only screen and (max-width: 112.5em) {
+            @content;
+        }
+    }
+    @if ($breakpoint == tablet__landscape){
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+    }
+    @if ($breakpoint == tablet__portait){
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if ($breakpoint == phone){
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

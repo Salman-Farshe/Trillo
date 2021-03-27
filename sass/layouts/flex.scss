@@ -49,4 +49,9 @@
 .user-review{
     background-color: darkred;
     flex: 1;
+
+    @include responsive(tablet__portait){
+        background-color: var(--light-color);
+        flex: 0 1 100%;
+    }
 }

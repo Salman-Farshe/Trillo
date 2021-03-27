@@ -65,6 +65,12 @@
                 border-radius: 50%;
                 border: 3px solid var(--light-color);
 
+                @include responsive(tablet__portait){
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid var(--light-color);
+                }
+
                 &:not(:last-child){
                     margin-right: -1rem;
                 }

@@ -172,12 +172,20 @@ body {
 .detail {
   display: flex;
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      flex-direction: column;
+      padding: 1rem; } }
 
 .description {
   background-color: var(--light-color);
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.06);
   flex: 0 1 70%;
   margin-right: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      flex: 0 1 100%;
+      margin-right: 0rem; } }
 
 .user-review {
   background-color: darkred;
@@ -359,6 +367,11 @@ body {
       height: 2.5rem;
       border-radius: 50%;
       border: 3px solid var(--light-color); }
+      @media only screen and (max-width: 56.25em) {
+        .detail .description .recommend__image {
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid var(--light-color); } }
       .detail .description .recommend__image:not(:last-child) {
         margin-right: -1rem; }
 

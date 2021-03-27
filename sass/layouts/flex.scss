@@ -7,11 +7,19 @@
     flex: 0 1 20%; // grow, shrink, basis
     background-color: var(--dark-color);
     min-height: 100%;
+
+    @include responsive(tablet__portait){
+        flex: 0 1 30%;
+    }
 }
 
 .hotel__view{
     flex: 1; // only grow
     height: 100%;
+
+    @include responsive(tablet__portait){
+        flex: 1;
+    }
 }
 
 /////////////////////////////////////////////////////

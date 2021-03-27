@@ -158,10 +158,16 @@ body {
   flex: 0 1 20%;
   background-color: var(--dark-color);
   min-height: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      flex: 0 1 30%; } }
 
 .hotel__view {
   flex: 1;
   height: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .hotel__view {
+      flex: 1; } }
 
 .detail {
   display: flex;

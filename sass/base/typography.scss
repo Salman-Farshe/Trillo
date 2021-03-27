@@ -1,5 +1,9 @@
 html, body{
     font-family: 'Open Sans', sans-serif;
+
+    @include responsive(tablet__landscape){
+        background-color: var(--light-color);
+    }
 }
 
 html{

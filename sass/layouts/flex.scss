@@ -1,12 +1,12 @@
 .content{
     display: flex;
-    height: 100%; // depends on parent element
+    min-height: 100%; // depends on parent element
 }
 
 .sidebar{
     flex: 0 1 20%; // grow, shrink, basis
     background-color: var(--dark-color);
-    height: 100%;
+    min-height: 100%;
 
     margin-top: -3rem;
 }

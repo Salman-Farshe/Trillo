@@ -328,6 +328,48 @@ body {
       .detail .description .recommend__image:not(:last-child) {
         margin-right: -1rem; }
 
+.user-review {
+  background-color: var(--light-color);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.05);
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .user-review .review {
+    font-size: 0.9rem;
+    font-weight: 400; }
+    .user-review .review__text {
+      text-align: left; }
+    .user-review .review__details {
+      display: flex;
+      line-height: 0rem;
+      align-items: center; }
+    .user-review .review__image {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%; }
+    .user-review .review__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem; }
+    .user-review .review__name {
+      font-size: 0.8rem;
+      font-weight: 300; }
+    .user-review .review__date {
+      font-size: 0.7rem;
+      font-weight: 300; }
+    .user-review .review__rating {
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-left: 2rem; }
+  .user-review .review__button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color); }
+    .user-review .review__button:hover, .user-review .review__button:focus {
+      animation: pulset 0.2s infinite; }
+
 .container {
   max-width: 80vw;
   height: 150vh;

@@ -367,6 +367,10 @@ body {
   .detail .description .recommend {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .detail .description .recommend {
+        flex-direction: column;
+        justify-content: center; } }
     .detail .description .recommend__count {
       font-size: 0.8rem;
       font-weight: 700;

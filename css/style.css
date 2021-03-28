@@ -395,6 +395,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .user-review {
       flex-direction: row; } }
+  @media only screen and (max-width: 37.5em) {
+    .user-review {
+      flex-direction: column; } }
   .user-review .review {
     font-size: 0.9rem;
     font-weight: 400; }
@@ -407,6 +410,9 @@ body {
       display: flex;
       line-height: 0rem;
       align-items: center; }
+      @media only screen and (max-width: 37.5em) {
+        .user-review .review__details {
+          justify-content: space-between; } }
     .user-review .review__image {
       width: 3rem;
       height: 3rem;

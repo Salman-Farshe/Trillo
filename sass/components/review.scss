@@ -10,6 +10,10 @@
     @include responsive(tablet__portait){
         flex-direction: row;
     }
+
+    @include responsive(phone){
+        flex-direction: column;
+    }
     .review{
         font-size: 0.9rem;
         font-weight: 400;
@@ -26,6 +30,10 @@
             display: flex;
             line-height: 0rem;
             align-items: center;
+
+            @include responsive(phone){
+                justify-content: space-between;
+            }
         }
 
         &__image{

@@ -18,6 +18,10 @@
 .logo{
     height: 4rem;
     margin-left: 3rem;
+
+    @include responsive(phone){
+        margin-left: 0rem;
+    }
 }
 
 
@@ -30,6 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include responsive(phone){
+        flex: 0 1 30%;
+    }
 
     &__input{
         font-size: inherit;

@@ -65,6 +65,9 @@ body {
 .logo {
   height: 4rem;
   margin-left: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .logo {
+      margin-left: 0rem; } }
 
 /* search icon */
 .search {
@@ -73,6 +76,9 @@ body {
   justify-content: center;
   align-items: center;
   /*Use adjacent sibling.......... */ }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      flex: 0 1 30%; } }
   .search__input {
     font-size: inherit;
     font-family: inherit;

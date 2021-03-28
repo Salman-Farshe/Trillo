@@ -11,6 +11,10 @@
     @include responsive(tablet__portait){
         flex: 0 1 30%;
     }
+
+    @include responsive(phone){
+        flex: 0 1 40%;
+    }
 }
 
 .hotel__view{
@@ -18,6 +22,10 @@
     height: 100%;
 
     @include responsive(tablet__portait){
+        flex: 1;
+    }
+
+    @include responsive(phone){
         flex: 1;
     }
 }

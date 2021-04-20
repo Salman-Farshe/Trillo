@@ -273,11 +273,19 @@ body {
       margin-right: 1.5rem;
       /* color of the parent element */
       fill: currentColor; }
+      @media only screen and (max-width: 50em) {
+        .content .sidebar .side-nav__icon {
+          height: 1rem;
+          width: 1rem;
+          margin-right: 1rem; } }
     .content .sidebar .side-nav span {
       font-size: 1rem;
       font-weight: 400;
       text-transform: uppercase;
       text-align: center; }
+      @media only screen and (max-width: 50em) {
+        .content .sidebar .side-nav span {
+          font: 0.8rem; } }
   .content .sidebar .legal {
     font-size: 0.8rem;
     font-weight: 500;

@@ -11,6 +11,8 @@ phone           - 600px
 tablet portait  - 900px
 tablet landscape - 1200px
 desktop          - 1400px
+
+custom      800px       50em
 */
 
 @mixin responsive($breakpoint){
@@ -31,6 +33,12 @@ desktop          - 1400px
     }
     @if ($breakpoint == phone){
         @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == custom800) {
+        @media only screen and (max-width: 50em){
             @content;
         }
     }

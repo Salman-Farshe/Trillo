@@ -1,6 +1,10 @@
 .content{
     display: flex;
     min-height: 100%; // depends on parent element
+
+    @include responsive(custom800){
+        flex-direction: column;
+    }
 }
 
 .sidebar{
@@ -14,6 +18,10 @@
 
     @include responsive(phone){
         flex: 0 1 40%;
+    }
+
+    @include responsive(custom800){
+        flex: 0 1 100%;
     }
 }
 

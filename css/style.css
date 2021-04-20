@@ -19,6 +19,8 @@ phone           - 600px
 tablet portait  - 900px
 tablet landscape - 1200px
 desktop          - 1400px
+
+custom      800px       50em
 */
 *,
 *::before,
@@ -35,6 +37,9 @@ html, body {
 
 html {
   font-size: 1rem; }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 0.8rem; } }
 
 body {
   background-color: var(--primary-color); }
@@ -159,6 +164,9 @@ body {
 .content {
   display: flex;
   min-height: 100%; }
+  @media only screen and (max-width: 50em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   flex: 0 1 20%;
@@ -170,6 +178,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .sidebar {
       flex: 0 1 40%; } }
+  @media only screen and (max-width: 50em) {
+    .sidebar {
+      flex: 0 1 100%; } }
 
 .hotel__view {
   flex: 1;
@@ -217,6 +228,12 @@ body {
     list-style: none;
     margin-top: 3rem;
     padding: 0rem; }
+    @media only screen and (max-width: 50em) {
+      .content .sidebar .side-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem; } }
     .content .sidebar .side-nav__item {
       position: relative; }
       .content .sidebar .side-nav__item:not(:last-child) {
